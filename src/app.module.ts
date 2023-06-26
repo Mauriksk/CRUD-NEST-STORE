@@ -1,7 +1,11 @@
 import { Module } from '@nestjs/common';
-import { StoreModule } from './store/store.module';
+import { MongooseModule } from '@nestjs/mongoose';
+import { ProductModule } from './product/product.module';
 
 @Module({
-  imports: [StoreModule],
+  imports: [
+    MongooseModule.forRoot('mongodb://localhost:27017/store-challenge'),
+    ProductModule,
+  ],
 })
 export class AppModule {}
