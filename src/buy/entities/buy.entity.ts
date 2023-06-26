@@ -7,23 +7,23 @@ export class Buy extends Document {
         unique: false,
         index: true,
     })
-    date: string;
+    date: number;
     
     @Prop({
         unique: false,
         index: true,
     })
     clientName: string;
-    
+
     @Prop({
         unique: false,
         index: true,
     })
-    products: []
-}
-
-interface Product {
-    name: string;
+    product: string;
+    @Prop({
+        unique: false,
+        index: true,
+    })
     quantity: number;
 }
 

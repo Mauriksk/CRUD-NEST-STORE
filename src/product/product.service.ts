@@ -74,6 +74,6 @@ export class ProductService {
         `Product already exist ${JSON.stringify(error.keyValue)}`,
       );
     }
-    throw new InternalServerErrorException("Can't add new product");
+    throw new InternalServerErrorException(`Can't add new product ${JSON.stringify(error)}`);
   }
 }
