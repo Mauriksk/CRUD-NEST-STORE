@@ -18,18 +18,4 @@ export class BuyController {
     return this.buyService.findAll(paginationDto);
   }
 
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.buyService.findOne(+id);
-  }
-
-  @Patch(':id')
-  update(@Param('id') id: string, @Body() updateBuyDto: UpdateBuyDto) {
-    return this.buyService.update(+id, updateBuyDto);
-  }
-
-  @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.buyService.remove(+id);
-  }
 }

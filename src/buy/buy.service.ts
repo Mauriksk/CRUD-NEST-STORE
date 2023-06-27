@@ -51,32 +51,6 @@ export class BuyService {
         `somthing wrong with your buy ${JSON.stringify(error)}`,
       );
     }
-    // try {1
-    //   if(createBuyDto.products.length){
-    //     createBuyDto.products.forEach(async ({name, quantity }) => {
-    //      const existProduct = await this.productService.findOne(name)
-    //      if(existProduct && existProduct.inInventory >= quantity){
-    //        const newBuy: UpdateProductDto = {
-    //          ...existProduct,
-    //          inInventory: (existProduct.inInventory - quantity)
-    //        }
-    //        this.productService.update(name, newBuy)
-    //      }
-    //      throw new NotFoundException(`Product not exist or insufficient amount of ${name}`);
-    //    })
-    //  }
-    // const currentDate = new Date()
-    // const buyDto: CreateBuyDto = {
-    //   ...createBuyDto,
-    //   date: currentDate.getDate().toLocaleString(),
-    // }
-    // this.buyModel.create(buyDto)
-    //  return buyDto;
-    // } catch (error) {
-    //   throw new BadRequestException(
-    //     `Product already exist ${JSON.stringify(error.keyValue)}`,
-    //   );
-    // }
   }
 
   findAll(paginationDto: PaginationDto) {
@@ -84,17 +58,5 @@ export class BuyService {
     return this.buyModel.find()
       .limit(limit)
       .skip(offset)
-  }
-
-  findOne(id: number) {
-    return `This action returns a #${id} buy`;
-  }
-
-  update(id: number, updateBuyDto: UpdateBuyDto) {
-    return `This action updates a #${id} buy`;
-  }
-
-  remove(id: number) {
-    return `This action removes a #${id} buy`;
   }
 }
