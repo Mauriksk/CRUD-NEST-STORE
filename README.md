@@ -19,6 +19,11 @@ npm i -g @nestjs/cli
 docker-compose up -d
 ```
 
+5. Levantar app en desarrollo
+```
+yarn start:dev
+```
+
 
 ## Stack usado
 * MongoDB
