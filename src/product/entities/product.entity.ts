@@ -23,6 +23,17 @@ export class Product extends Document {
         index: true,
     })
     max: number;
+    @Prop({
+        unique: false,
+        index: true,
+    })
+    price: number;
+
+    @Prop({
+        unique: false,
+        index: true,
+    })
+    url?: string;
 }
 
 export const ProductSchema = SchemaFactory.createForClass(Product)

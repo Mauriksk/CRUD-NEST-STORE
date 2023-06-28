@@ -19,4 +19,13 @@ export class CreateProductDto {
     @IsPositive()
     @Min(1)
     max: number;
+
+    @IsInt()
+    @IsPositive()
+    @Min(1)
+    price: number;
+
+    @IsString()
+    @MinLength(1)
+    url: string;
 }
